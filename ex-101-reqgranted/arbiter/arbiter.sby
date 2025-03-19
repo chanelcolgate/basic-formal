@@ -1,0 +1,17 @@
+[tasks]
+cvr
+prf
+
+[options]
+cvr: mode cover
+prf: mode prove
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal arbiter.sv
+prep -top arbiter
+
+[files]
+arbiter.sv
