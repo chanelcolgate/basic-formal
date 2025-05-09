@@ -1,0 +1,18 @@
+[tasks]
+cvr
+prf
+
+[options]
+cvr: mode cover
+prf: mode prove
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read -formal fifo_sva.v
+prep -top fifo
+
+[files]
+fifo_sva.v
